@@ -235,8 +235,8 @@ sub load_tags_images($$) {
 			if ($file =~ /^((.*)\.\d+x${logo_height}.(png|svg))$/) {
 				if ((not defined $tags_images{$lc}{$tagtype}{$2}) or ($3 eq 'svg')) {
 					$tags_images{$lc}{$tagtype}{$2} = $1;
-					print STDERR "load_tags_images - tags_images - lc: $lc - tagtype: $tagtype - tag: $2 - img: $1 - ext: $3 \n";
-					print "load_tags_images - tags_images - loading lc: $lc - tagtype: $tagtype - tag: $2 - img: $1 - ext: $3 \n";
+					# print STDERR "load_tags_images - tags_images - lc: $lc - tagtype: $tagtype - tag: $2 - img: $1 - ext: $3 \n";
+					# print "load_tags_images - tags_images - loading lc: $lc - tagtype: $tagtype - tag: $2 - img: $1 - ext: $3 \n";
 				}
 			}
 		}
@@ -1810,10 +1810,6 @@ sub display_tags_hierarchy_taxonomy($$$) {
 				$img_lc = 'en';
 			}
 			
-			if ($tag =~ /certified|montagna/) {
-				print STDERR "labels_logo - lc_imgid: $lc_imgid - en_imgid: $en_imgid - canon_tagid: $canon_tagid - img: $img \n";
-			}
-
 			
 			if ($img) {
 				my $size = '';
